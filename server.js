@@ -1,7 +1,7 @@
 var express=require("express");
 var bodyparser=require("body-parser");
 var app=express();
-var PORT=5000;
+var PORT=process.env.PORT||5000;
 app.use(bodyparser.json());
 app.use(bodyparser.urlencoded({extended:true}));
 app.use(bodyparser.text());
